@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route path="frontend-challenge/" exact component={AllCats} />
+        <Route path="/" exact component={AllCats} />
 
-        <Route path="frontend-challenge/likesCats" component={LikesCats} />
+        <Route path="/likesCats" component={LikesCats} />
       </Switch>
     </div>
   );
