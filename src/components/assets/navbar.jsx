@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-  const [nav, setNav] = useState([{path: '/', text: 'Все котики'}, {path: '/likesCats', text: 'Любимые котики'}]);
+  const [nav, setNav] = useState([{path: 'frontend-challenge/', text: 'Все котики'}, {path: 'frontend-challenge/likesCats', text: 'Любимые котики'}]);
   const [ind, setInd] = useState(0);
   
     return (
