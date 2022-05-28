@@ -2,7 +2,6 @@ import React from 'react'
 import full from '../fotos/full.png'
 import out from '../fotos/out.png'
 function Fotos({catsFotos,  clickFoto}) {
-    console.log(catsFotos);
     const overFoto = (e) => {
         e.target.src = full
     }

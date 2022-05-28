@@ -1,10 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect,  useState } from 'react'
 import Fotos from '../assets/fotos';
 
 function AllCats() {
-    const lastElelm = useRef()
-    const observer = useRef()
+  
     const [catsFotos, setCatsFotos] = useState([]);
     useEffect(() => {
         getFotos()
@@ -23,9 +22,9 @@ function AllCats() {
             setCatsFotos(JSON.parse(localStorage.getItem('catsFotos')))
         }else{
             const res = await axios.get('https://api.thecatapi.com/v1/images/search?limit=15&page=100&order=DESC')
-           const data = res.data.map(foto => foto.like = false)
-            setCatsFotos([ ...data])
+            setCatsFotos([ ...res.data])
             localStorage.setItem('catsFotos', JSON.stringify([...res.data]))
+            console.log();
 
         }
     }
